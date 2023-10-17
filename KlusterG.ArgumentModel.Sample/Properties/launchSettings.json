@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "KlusterG.ArgumentModel.Sample": {
+      "commandName": "Project",
+      "commandLineArgs": "-n \"João Gabriel\" -l --age 43"
+    }
+  }
+}

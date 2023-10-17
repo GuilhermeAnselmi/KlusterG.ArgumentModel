@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlusterG.ArgumentModel", "KlusterG.ArgumentModel\KlusterG.ArgumentModel.csproj", "{0890A219-13D2-4B7E-8FF0-97C6A4F8E5FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlusterG.ArgumentModel.Sample", "KlusterG.ArgumentModel.Sample\KlusterG.ArgumentModel.Sample.csproj", "{1C311F2F-309D-4CFF-9EBD-426999FC11CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0890A219-13D2-4B7E-8FF0-97C6A4F8E5FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0890A219-13D2-4B7E-8FF0-97C6A4F8E5FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0890A219-13D2-4B7E-8FF0-97C6A4F8E5FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0890A219-13D2-4B7E-8FF0-97C6A4F8E5FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C311F2F-309D-4CFF-9EBD-426999FC11CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C311F2F-309D-4CFF-9EBD-426999FC11CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C311F2F-309D-4CFF-9EBD-426999FC11CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C311F2F-309D-4CFF-9EBD-426999FC11CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6999FC64-AF8C-4152-A401-1C93B26C3F7B}
+	EndGlobalSection
+EndGlobal
