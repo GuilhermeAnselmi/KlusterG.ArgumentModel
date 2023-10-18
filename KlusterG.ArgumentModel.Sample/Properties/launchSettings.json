@@ -2,7 +2,7 @@
   "profiles": {
     "KlusterG.ArgumentModel.Sample": {
       "commandName": "Project",
-      "commandLineArgs": "-n \"João Gabriel\" -l --age 43"
+      "commandLineArgs": "--name \"João Gabriel\" -l --age 43 -s 1 --value 20,3 -d 2023/12/20"
     }
   }
 }

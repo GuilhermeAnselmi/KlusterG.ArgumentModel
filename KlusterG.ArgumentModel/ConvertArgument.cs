@@ -1,4 +1,5 @@
 ﻿using KlusterG.ArgumentModel.Attributes;
+using System.ComponentModel;
 using System.Reflection;
 
 namespace KlusterG.ArgumentModel
@@ -10,6 +11,15 @@ namespace KlusterG.ArgumentModel
             T model = new T();
 
             var properties = typeof(T).GetProperties();
+            var allArguments = properties.Select(x => x.GetCustomAttributes(typeof(Argument), false).FirstOrDefault()).Where(x => x != null).ToList();
+            
+            List<Argument> arguments = new List<Argument>();
+
+            allArguments.ForEach(argument =>
+            {
+                arguments.Add((Argument)argument);
+            });
+
 
             foreach (var property in properties)
             {
@@ -20,6 +30,12 @@ namespace KlusterG.ArgumentModel
 
                 if (args.Contains(argument.Name) && args.Contains(argument.Abbreviation))
                     throw new ArgumentException($"The command line cannot have the same name and abbreviation. {argument.Name}, {argument.Abbreviation}");
+
+                if (arguments.Count(x => x.Name == argument.Name) > 1)
+                    throw new ArgumentException($"Repeating arguments is not allowed. {argument.Name}");
+
+                if (arguments.Count(x => x.Abbreviation == argument.Abbreviation) > 1)
+                    throw new ArgumentException($"Repeating arguments is not allowed. {argument.Abbreviation}");
 
                 if (args.Contains(argument.Name))
                 {
@@ -44,10 +60,29 @@ namespace KlusterG.ArgumentModel
 
         private static void DefineProperty<T>(List<string> args, PropertyInfo property, T model, string argumentName)
         {
-            string value = args[args.IndexOf(argumentName) + 1];
+            var value = args[args.IndexOf(argumentName) + 1];
 
             if (value.Contains("-") && property.PropertyType != typeof(bool))
                 throw new ArgumentException($"No value was passed to {argumentName}");
+
+            if (property.PropertyType == typeof(bool))
+            {
+                property.SetValue(model, true);
+
+                return;
+            }
+
+            var type = property.PropertyType;
+            var converter = TypeDescriptor.GetConverter(type);
+
+            if (converter != null && converter.CanConvertFrom(typeof(string)))
+            {
+                var convertedValue = converter.ConvertFrom(value);
+
+                property.SetValue(model, convertedValue);
+            }
+
+            return;
 
             if (property.PropertyType == typeof(bool)) property.SetValue(model, true);
             else if (property.PropertyType == typeof(sbyte)) property.SetValue(model, sbyte.Parse(value));
