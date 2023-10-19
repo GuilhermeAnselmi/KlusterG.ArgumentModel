@@ -14,6 +14,9 @@
 **.NET CLI**
 * Type the command dotnet add package KlusterG.ArgumentModel --version 1.0.0
 
+**NuGet ORG**
+* [Nuget](https://www.nuget.org/packages/KlusterG.ArgumentModel/1.0.0)
+
 # How It Works?
 **Description**
 * Create a data model that represents the arguments and add the attributes to the respective properties
