@@ -12,10 +12,10 @@
 * Install the latest version of the library
 
 **.NET CLI**
-* Type the command dotnet add package KlusterG.ArgumentModel --version 1.0.0
+* Type the command dotnet add package KlusterG.ArgumentModel --version 1.0.1
 
 **NuGet ORG**
-* [Nuget](https://www.nuget.org/packages/KlusterG.ArgumentModel/1.0.0)
+* [Nuget](https://www.nuget.org/packages/KlusterG.ArgumentModel/1.0.1)
 
 # How It Works?
 **Description**
