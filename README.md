@@ -11,7 +11,7 @@
 * Search for KlusterG.ArgumentModel
 * Install the latest version of the library
 
-## Command Line
+**Command Line**
 * Access the Package Manager Console
 * Type the command ```Install-Package KlusterG.ArgumentModel -Version 1.0.1```
 
