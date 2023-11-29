@@ -85,24 +85,6 @@ namespace KlusterG.ArgumentModel
             }
 
             return;
-
-            if (property.PropertyType == typeof(bool)) property.SetValue(model, true);
-            else if (property.PropertyType == typeof(sbyte)) property.SetValue(model, sbyte.Parse(value));
-            else if (property.PropertyType == typeof(byte)) property.SetValue(model, byte.Parse(value));
-            else if (property.PropertyType == typeof(short)) property.SetValue(model, short.Parse(value));
-            else if (property.PropertyType == typeof(ushort)) property.SetValue(model, ushort.Parse(value));
-            else if (property.PropertyType == typeof(int)) property.SetValue(model, int.Parse(value));
-            else if (property.PropertyType == typeof(uint)) property.SetValue(model, uint.Parse(value));
-            else if (property.PropertyType == typeof(long)) property.SetValue(model, long.Parse(value));
-            else if (property.PropertyType == typeof(ulong)) property.SetValue(model, ulong.Parse(value));
-            else if (property.PropertyType == typeof(float)) property.SetValue(model, float.Parse(value));
-            else if (property.PropertyType == typeof(double)) property.SetValue(model, double.Parse(value));
-            else if (property.PropertyType == typeof(decimal)) property.SetValue(model, decimal.Parse(value));
-            else if (property.PropertyType == typeof(char)) property.SetValue(model, char.Parse(value));
-            else if (property.PropertyType == typeof(DateTime)) property.SetValue(model, DateTime.Parse(value));
-            else if (property.PropertyType == typeof(IntPtr)) property.SetValue(model, IntPtr.Parse(value));
-            else if (property.PropertyType == typeof(UIntPtr)) property.SetValue(model, UIntPtr.Parse(value));
-            else property.SetValue(model, value);
         }
     }
 }
