@@ -62,7 +62,9 @@ namespace KlusterG.ArgumentModel
         {
             var value = args[args.IndexOf(argumentName) + 1];
 
-            if (value.Contains("-") && property.PropertyType != typeof(bool))
+            if (((value.Count() > 0 && value.Substring(0, 1).Equals("-")) || 
+                (value.Count() > 1 && value.Substring(0, 2).Equals("--"))) && 
+                property.PropertyType != typeof(bool))
                 throw new ArgumentException($"No value was passed to {argumentName}");
 
             if (property.PropertyType == typeof(bool))
