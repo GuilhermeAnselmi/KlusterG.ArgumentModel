@@ -2,7 +2,7 @@
 * This project converts command line arguments into a preloaded template.
 
 # Requirements
-* .NET Core v7.0
+* .NET Core v7.0 +
 
 # How To Import?
 **NuGet**
